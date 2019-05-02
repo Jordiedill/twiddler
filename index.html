@@ -3,25 +3,54 @@
   <head>
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
+    <script src="app.js"></script>
+    <script src="jquery.min.js" type="text/javascript"></script>
+    <script src="jquery.timeago.js" type="text/javascript"></script>
   </head>
-  <body>
+
+  <img src = "https://i0.wp.com/feedthesocial.co/wp-content/uploads/2016/11/twitter-banner.jpg" width = "50%">
+
+<h1> Twitter Logo</h1>
+<div>
+<button id="button-id1" onclick = 'generate()'>Generate</button>
+</div>
+
+  <body onload = "generate()">
+  <b1>
     <script>
-
+      function generate(){
+      // var time = new Date();
       $(document).ready(function(){
-        var $body = $('body');
+        var $body = $('b1');
         $body.html('');
-
         var index = streams.home.length - 1;
         while(index >= 0){
           var tweet = streams.home[index];
           var $tweet = $('<div></div>');
-          $tweet.text('@' + tweet.user + ': ' + tweet.message);
+          $tweet.text(tweet.created_at + '@' + tweet.user + ': ' + tweet.message + '<a href = "www.google.com"></a>');
           $tweet.appendTo($body);
+          $('#tweet1').val(tweet.user);
           index -= 1;
+
         }
-
       });
-
+    };
     </script>
+    <a href = ""></a>
+  </b1>
   </body>
+
+
+
+<h4>Find tweets from a user</h4>
+<div class="wrapper">
+    <input type="text" id="userSearch" placeholder = "Search for tweets from a user..." />
+    <button onclick="userFunc()">Search User Tweets</button>
+</div>
+<div class = "result">
+<p1>Results here!</p1>
+
+<p><input id="tweet1" value="" onclick = userFunc()></<p>
+  <button onclick="userFunc()">Search User Tweets</button>
+</div>
 </html>
