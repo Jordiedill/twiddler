@@ -4,6 +4,7 @@
     <script src="jquery.js"></script>
     <script src="data_generator.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <link href="style.css" type="text/css" rel="stylesheet" />
   </head>
   <h1>Twiddler</h1>
   <body>
@@ -40,7 +41,7 @@
         var filteredTweets = streams.home.filter(tweeter => tweeter.user === clickedUsername);
         for (var index = 0; index <= filteredTweets.length - 1; index += 1) {
           var tweet = filteredTweets[index];
-          var $tweet = $(`<div class='tweet'><p><div><a href='#!' class='account-username'>@${tweet.user}:</a></div><div class='message'>${tweet.message}</div><div class='timestamp'>${moment(tweet.created_at).fromNow()}</div></p></div>`);
+          var $tweet = $(`<div class='tweet'><p><div><a href='#!' class='account-username'>@${tweet.user}:</a></div><div class='message'>${tweet.message}</div><div class='timestamp'>${moment(tweet.created_at).calendar()}</div></p></div>`);
           $tweet.prependTo($body);
         }
       })

@@ -27,3 +27,11 @@ body {*/
   background-repeat: no-repeat;
   background-size: cover;
 }*/
+.tweet {
+  border-radius: 20px;
+  border: 1px solid black;
+  padding:10px;
+  margin:20px;
+  box-shadow: 5px 10px 10px #786384;
+
+}
