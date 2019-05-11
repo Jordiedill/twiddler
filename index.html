@@ -6,12 +6,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <link href="style.css" type="text/css" rel="stylesheet" />
   </head>
+  <center><div class="header">
   <h1>Twiddler</h1>
+  </div></center>
   <body>
+    <div class="display">
     <script>
 
       $(document).ready(function(){
-        var $body = $('body');
+        var $body = $('.display');
         // $body.html('');
 
   
@@ -32,7 +35,7 @@
 
           }
 
-          setInterval(displayTweets, 250);
+          setInterval(displayTweets, 2000);
 
 
             $(document).on('click', '.account-username', function (event) {
@@ -51,5 +54,6 @@
       });
 
     </script>
+  </div>
   </body>
 </html>

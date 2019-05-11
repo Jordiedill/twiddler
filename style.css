@@ -27,6 +27,12 @@ body {*/
   background-repeat: no-repeat;
   background-size: cover;
 }*/
+.header {
+  justify-content: center;
+}
+
+.display {
+}
 .tweet {
   border-radius: 20px;
   border: 1px solid black;
